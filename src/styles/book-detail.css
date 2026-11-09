@@ -1,13 +1,16 @@
 .book-detail-page {
     min-height: 100vh;
-    color: var(--ink);
-    background: var(--paper);
+    color: var(--color-text);
+    background: transparent;
 }
 
 .book-detail-main {
     width: min(1200px, calc(100% - 64px));
     margin: 0 auto;
-    padding: 28px 0 78px;
+    padding: 28px 32px 78px;
+    border: 1px solid var(--color-secondary);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
 }
 
 .book-detail-breadcrumb {
@@ -16,12 +19,12 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 30px;
-    color: var(--muted);
+    color: var(--color-text-secondary);
     font-size: 12px;
 }
 
 .book-detail-breadcrumb a {
-    color: var(--green);
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -38,7 +41,7 @@
     place-items: center;
     padding: 28px;
     border: 1px solid var(--line);
-    background: #fffefa;
+    background: var(--color-surface-light);
 }
 
 .book-detail-cover {
@@ -58,14 +61,14 @@
     justify-content: flex-end;
     gap: 16px;
     padding: 28px;
-    border-left: 12px solid #263b32;
-    color: #fffefa;
-    background: var(--green);
+    border-left: 12px solid var(--color-secondary);
+    color: var(--color-surface);
+    background: var(--color-forest);
 }
 
 .book-detail-cover-fallback span,
 .book-detail-cover-fallback small {
-    color: #e6d9c6;
+    color: var(--color-surface-light);
     font-size: 12px;
 }
 
@@ -83,7 +86,7 @@
 
 .book-detail-eyebrow {
     margin: 0 0 12px;
-    color: var(--clay);
+    color: var(--color-primary);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.16em;
@@ -93,7 +96,7 @@
 .book-detail-content h1,
 .book-detail-empty h1 {
     margin: 0;
-    color: var(--green);
+    color: var(--color-primary);
     font-family: var(--serif);
     font-size: 48px;
     font-weight: 500;
@@ -151,11 +154,11 @@
 }
 
 .book-detail-stock.is-available {
-    color: #38664a;
+    color: var(--color-forest);
 }
 
 .book-detail-stock.is-unavailable {
-    color: #a13d32;
+    color: var(--color-primary);
 }
 
 .book-detail-add-button {
@@ -163,8 +166,10 @@
     min-height: 50px;
     padding: 0 20px;
     border: 0;
-    color: #fffefa;
-    background: var(--clay);
+    color: var(--color-surface);
+    background: var(--color-primary);
+    border: 1px solid var(--color-secondary);
+    box-shadow: var(--shadow-raised);
     font: 700 13px var(--sans);
 }
 
@@ -176,7 +181,7 @@
 .book-detail-cart-note {
     max-width: 360px;
     margin: 9px 0 0;
-    color: var(--muted);
+    color: var(--color-text-secondary);
     font-size: 11px;
     line-height: 1.5;
 }
@@ -198,15 +203,15 @@
     padding: 0 2px;
     border: 0;
     border-bottom: 2px solid transparent;
-    color: var(--muted);
+    color: var(--color-text-secondary);
     background: transparent;
     cursor: pointer;
     font: 600 12px var(--sans);
 }
 
 .book-detail-tab[aria-selected="true"] {
-    border-bottom-color: var(--clay);
-    color: var(--green);
+    border-bottom-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .book-detail-tabpanel {
@@ -215,13 +220,13 @@
 }
 
 .book-detail-tabpanel:focus-visible {
-    outline: 2px solid var(--green);
+    outline: 2px solid var(--color-secondary);
     outline-offset: 4px;
 }
 
 .book-detail-description {
     margin: 0;
-    color: #55574f;
+    color: var(--color-text-secondary);
     font-size: 14px;
     line-height: 1.8;
 }
@@ -243,12 +248,12 @@
 }
 
 .book-detail-specifications dt {
-    color: var(--muted);
+    color: var(--color-text-secondary);
 }
 
 .book-detail-specifications dd {
     margin: 0;
-    color: var(--ink);
+    color: var(--color-text);
     font-weight: 600;
     text-align: right;
 }
@@ -269,20 +274,20 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    color: var(--green);
+    color: var(--color-primary);
     font-size: 13px;
 }
 
 .book-detail-review time {
     display: inline-block;
     margin-top: 5px;
-    color: var(--muted);
+    color: var(--color-text-secondary);
     font-size: 10px;
 }
 
 .book-detail-review p {
     margin: 9px 0 0;
-    color: #55574f;
+    color: var(--color-text-secondary);
     font-size: 12px;
     line-height: 1.65;
 }
@@ -295,11 +300,14 @@
     justify-content: center;
     width: min(760px, calc(100% - 48px));
     margin: 0 auto;
-    padding: 64px 0;
+    padding: 54px;
+    border: 1px solid var(--color-secondary);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
 }
 
 .book-detail-empty > p:not(.book-detail-eyebrow) {
-    color: var(--muted);
+    color: var(--color-text-secondary);
     line-height: 1.7;
 }
 
@@ -309,8 +317,9 @@
     align-items: center;
     margin-top: 12px;
     padding: 0 18px;
-    color: #fffefa;
-    background: var(--green);
+    color: var(--color-surface);
+    background: var(--color-primary);
+    border: 1px solid var(--color-secondary);
     font-size: 12px;
     font-weight: 700;
     text-decoration: none;
@@ -319,7 +328,7 @@
 @media (max-width: 800px) {
     .book-detail-main {
         width: min(680px, calc(100% - 40px));
-        padding-top: 22px;
+        padding: 22px 20px 58px;
     }
 
     .book-detail-layout {
@@ -381,5 +390,14 @@
 
     .book-detail-specifications {
         grid-template-columns: 1fr;
+    }
+
+    .book-detail-main {
+        width: calc(100% - 24px);
+        padding: 18px 12px 42px;
+    }
+
+    .book-detail-empty {
+        padding: 28px 18px;
     }
 }

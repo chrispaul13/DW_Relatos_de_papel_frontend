@@ -2,6 +2,10 @@
     width: min(1200px, 90%);
     margin: 50px auto 80px;
     min-height: 55vh;
+    padding: 34px;
+    border: 1px solid var(--color-secondary);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
 }
 
 .shopping-cart-heading {
@@ -42,7 +46,7 @@
     align-items: center;
     gap: 22px;
     padding: 20px;
-    background: var(--color-surface);
+    background: var(--color-surface-light);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
 }
@@ -108,13 +112,13 @@
 .cart-remove-button {
     border: none;
     background: transparent;
-    color: #A34C43;
+    color: var(--color-primary);
     text-decoration: underline;
 }
 
 .cart-summary {
     padding: 25px;
-    background: var(--color-surface);
+    background: var(--color-surface-light);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
 }
@@ -154,7 +158,7 @@
     align-items: center;
     padding: 13px 22px;
     background: var(--color-primary);
-    color: white;
+    color: var(--color-surface);
     border: none;
     border-radius: var(--border-radius);
     text-align: center;
@@ -179,7 +183,7 @@
 .cart-empty {
     padding: 65px 20px;
     text-align: center;
-    background: var(--color-surface);
+    background: var(--color-surface-light);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
 }
@@ -211,6 +215,11 @@
 }
 
 @media (max-width: 550px) {
+    .shopping-cart-main {
+        width: calc(100% - 24px);
+        padding: 20px 14px;
+    }
+
     .shopping-cart-heading h1 {
         font-size: 30px;
     }

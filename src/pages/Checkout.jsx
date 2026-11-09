@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import BookCover from "../components/BookCover";
 import { useCart } from "../hooks/useCart";
 import "../styles/checkout.css";
 
@@ -57,9 +58,11 @@ function Checkout() {
                                         key={item.id}
                                     >
                                         <div className="checkout-item-image">
-                                            <img
-                                                src={item.image}
-                                                alt={item.title}
+                                            <BookCover
+                                                book={item}
+                                                className="checkout-item-cover"
+                                                fallbackClassName="checkout-item-cover book-cover-fallback--cart"
+                                                loading="eager"
                                             />
                                         </div>
 
@@ -119,6 +122,10 @@ function Checkout() {
                     </div>
                 )}
             </main>
+            <footer className="site-footer">
+                <p>© 2026 Relatos de papel</p>
+                <Link to="/home">Volver al catálogo</Link>
+            </footer>
         </>
     );
 }
