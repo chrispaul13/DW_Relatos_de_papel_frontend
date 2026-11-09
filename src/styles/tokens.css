@@ -1,0 +1,13 @@
+:root {
+        color-scheme: light;
+        --green: #344b40;
+        --green-deep: #263b32;
+        --paper: #f8f5ef;
+        --white: #fffefa;
+        --clay: #a66b43;
+        --ink: #292929;
+        --muted: #6b6d67;
+        --line: #e8e2d8;
+        --serif: "Playfair Display", Georgia, serif;
+        --sans: "DM Sans", "Segoe UI", sans-serif;
+      }

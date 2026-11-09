@@ -9,6 +9,7 @@ import Home from "../pages/Home";
 import BookDetail from "../pages/BookDetail";
 import Checkout from "../pages/Checkout";
 import Profile from "../pages/Profile";
+import ShoppingCart from "../pages/ShoppingCart";
 
 function AppRouter() {
     return (
@@ -20,6 +21,7 @@ function AppRouter() {
                 <Route path="/book/:id" element={<BookDetail />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/cart" element={<ShoppingCart />} />
             </Routes>
         </BrowserRouter>
     );
