@@ -1,0 +1,40 @@
+:root {
+  /* Colores principales */
+  --color-primary: #641E2B;
+  --color-primary-dark: #45151F;
+  --color-secondary: #B08D57;
+  --color-forest: #243B32;
+
+  /* Fondos */
+  --color-background: #493326;
+  --color-surface: #E9DCC3;
+  --color-surface-light: #F1E7D4;
+
+  /* Textos */
+  --color-text: #211C19;
+  --color-text-secondary: #5D4A3A;
+
+  /* Bordes */
+  --color-border: #B08D57;
+  --color-success: #31533E;
+  --color-danger: #641E2B;
+
+  /* Tipografías */
+  --font-heading: "Cinzel", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-editorial: "Cormorant Garamond", "Palatino Linotype", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
+
+  /* Tamaños */
+  --container-width: 1200px;
+  --border-radius: 4px;
+  --shadow-card: 0 12px 30px rgba(20, 13, 10, 0.25);
+  --shadow-raised: 0 5px 16px rgba(20, 13, 10, 0.2);
+  --ring-focus: 0 0 0 3px rgba(176, 141, 87, 0.45);
+
+  /* Espaciado */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}

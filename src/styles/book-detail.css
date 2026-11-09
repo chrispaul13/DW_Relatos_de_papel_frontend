@@ -1,0 +1,403 @@
+.book-detail-page {
+    min-height: 100vh;
+    color: var(--color-text);
+    background: transparent;
+}
+
+.book-detail-main {
+    width: min(1200px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 28px 32px 78px;
+    border: 1px solid var(--color-secondary);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+.book-detail-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    color: var(--color-text-secondary);
+    font-size: 12px;
+}
+
+.book-detail-breadcrumb a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.book-detail-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+    align-items: start;
+    gap: clamp(42px, 7vw, 96px);
+}
+
+.book-detail-cover-wrap {
+    display: grid;
+    min-height: 480px;
+    place-items: center;
+    padding: 28px;
+    border: 1px solid var(--line);
+    background: var(--color-surface-light);
+}
+
+.book-detail-cover {
+    display: block;
+    width: 100%;
+    max-height: 590px;
+    aspect-ratio: 0.68;
+    object-fit: contain;
+}
+
+.book-detail-cover-fallback {
+    display: flex;
+    width: min(100%, 350px);
+    min-height: 440px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 28px;
+    border-left: 12px solid var(--color-secondary);
+    color: var(--color-surface);
+    background: var(--color-forest);
+}
+
+.book-detail-cover-fallback span,
+.book-detail-cover-fallback small {
+    color: var(--color-surface-light);
+    font-size: 12px;
+}
+
+.book-detail-cover-fallback strong {
+    max-width: 260px;
+    font-family: var(--serif);
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.book-detail-content {
+    min-width: 0;
+    padding-top: 6px;
+}
+
+.book-detail-eyebrow {
+    margin: 0 0 12px;
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.book-detail-content h1,
+.book-detail-empty h1 {
+    margin: 0;
+    color: var(--color-primary);
+    font-family: var(--serif);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.book-detail-author {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.book-detail-rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    margin-top: 20px;
+    color: var(--clay);
+    font-size: 13px;
+}
+
+.book-detail-rating > span,
+.book-detail-review-heading span {
+    color: var(--clay);
+    letter-spacing: 0.08em;
+}
+
+.book-detail-rating strong {
+    color: var(--ink);
+}
+
+.book-detail-rating-link {
+    padding: 0;
+    border: 0;
+    color: var(--green);
+    background: none;
+    cursor: pointer;
+    font: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.book-detail-price {
+    margin: 24px 0 4px;
+    color: var(--green);
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.book-detail-stock {
+    margin: 0 0 18px;
+    font-size: 12px;
+}
+
+.book-detail-stock.is-available {
+    color: var(--color-forest);
+}
+
+.book-detail-stock.is-unavailable {
+    color: var(--color-primary);
+}
+
+.book-detail-add-button {
+    width: min(100%, 360px);
+    min-height: 50px;
+    padding: 0 20px;
+    border: 0;
+    color: var(--color-surface);
+    background: var(--color-primary);
+    border: 1px solid var(--color-secondary);
+    box-shadow: var(--shadow-raised);
+    font: 700 13px var(--sans);
+}
+
+.book-detail-add-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.58;
+}
+
+.book-detail-cart-note {
+    max-width: 360px;
+    margin: 9px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.book-detail-tabs {
+    margin-top: 34px;
+}
+
+.book-detail-tablist {
+    display: flex;
+    gap: clamp(16px, 3vw, 34px);
+    overflow-x: auto;
+    border-bottom: 1px solid var(--line);
+}
+
+.book-detail-tab {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 2px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    color: var(--color-text-secondary);
+    background: transparent;
+    cursor: pointer;
+    font: 600 12px var(--sans);
+}
+
+.book-detail-tab[aria-selected="true"] {
+    border-bottom-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.book-detail-tabpanel {
+    min-height: 170px;
+    padding: 22px 0 0;
+}
+
+.book-detail-tabpanel:focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 4px;
+}
+
+.book-detail-description {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.book-detail-specifications {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 28px;
+    margin: 0;
+}
+
+.book-detail-specifications div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 12px;
+}
+
+.book-detail-specifications dt {
+    color: var(--color-text-secondary);
+}
+
+.book-detail-specifications dd {
+    margin: 0;
+    color: var(--color-text);
+    font-weight: 600;
+    text-align: right;
+}
+
+.book-detail-reviews {
+    display: grid;
+    gap: 18px;
+}
+
+.book-detail-review {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+}
+
+.book-detail-review-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--color-primary);
+    font-size: 13px;
+}
+
+.book-detail-review time {
+    display: inline-block;
+    margin-top: 5px;
+    color: var(--color-text-secondary);
+    font-size: 10px;
+}
+
+.book-detail-review p {
+    margin: 9px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.book-detail-empty {
+    display: flex;
+    min-height: 60vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: min(760px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 54px;
+    border: 1px solid var(--color-secondary);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+.book-detail-empty > p:not(.book-detail-eyebrow) {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.book-detail-back {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    margin-top: 12px;
+    padding: 0 18px;
+    color: var(--color-surface);
+    background: var(--color-primary);
+    border: 1px solid var(--color-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .book-detail-main {
+        width: min(680px, calc(100% - 40px));
+        padding: 22px 20px 58px;
+    }
+
+    .book-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .book-detail-cover-wrap {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .book-detail-cover {
+        width: min(100%, 340px);
+        max-height: 460px;
+    }
+
+    .book-detail-cover-fallback {
+        width: min(100%, 340px);
+        min-height: 400px;
+    }
+
+    .book-detail-content h1 {
+        font-size: 42px;
+    }
+
+    .book-detail-add-button {
+        width: 100%;
+    }
+
+    .book-detail-cart-note {
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-detail-main {
+        width: calc(100% - 32px);
+        padding-bottom: 52px;
+    }
+
+    .book-detail-breadcrumb {
+        gap: 7px;
+        margin-bottom: 20px;
+        font-size: 10px;
+    }
+
+    .book-detail-cover-wrap {
+        padding: 16px;
+    }
+
+    .book-detail-cover-fallback {
+        min-height: 360px;
+    }
+
+    .book-detail-content h1 {
+        font-size: 36px;
+    }
+
+    .book-detail-specifications {
+        grid-template-columns: 1fr;
+    }
+
+    .book-detail-main {
+        width: calc(100% - 24px);
+        padding: 18px 12px 42px;
+    }
+
+    .book-detail-empty {
+        padding: 28px 18px;
+    }
+}

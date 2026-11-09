@@ -1,0 +1,12 @@
+:root {
+  --green: var(--color-primary);
+  --green-deep: var(--color-forest);
+  --paper: var(--color-surface);
+  --white: var(--color-surface-light);
+  --clay: var(--color-secondary);
+  --ink: var(--color-text);
+  --muted: var(--color-text-secondary);
+  --line: var(--color-border);
+  --serif: var(--font-heading);
+  --sans: var(--font-body);
+}

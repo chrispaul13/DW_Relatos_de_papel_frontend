@@ -1,0 +1,58 @@
+.book-cover-fallback {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px;
+    border: 1px solid var(--color-secondary, #b08d57);
+    color: var(--color-surface, #e9dcc3);
+    background: var(--color-forest, #243b32);
+    text-align: center;
+}
+
+.book-cover-fallback span,
+.book-cover-fallback small {
+    color: var(--color-surface-light, #f1e7d4);
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.book-cover-fallback strong {
+    max-width: 100%;
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: 15px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.book-detail-cover-fallback {
+    width: min(100%, 350px);
+    min-height: 440px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 28px;
+    border-left: 12px solid var(--color-secondary, #b08d57);
+    text-align: left;
+}
+
+.book-detail-cover-fallback strong {
+    font-size: 30px;
+}
+
+.book-cover-fallback--cart {
+    font-size: 9px;
+}
+
+.book-cover-fallback--cart span,
+.book-cover-fallback--cart small {
+    font-size: 8px;
+}
+
+.book-cover-fallback--cart strong {
+    font-size: 10px;
+}
